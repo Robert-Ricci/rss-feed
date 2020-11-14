@@ -4,7 +4,7 @@ class RssContainer extends Component {
     render() {
         return (
             <div>
-                
+               welcome 
             </div>
         );
     }
