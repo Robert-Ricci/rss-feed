@@ -14,9 +14,15 @@ class rssForm extends Component {
     
     render() {
         return (
-            <div>
-                
-            </div>
+            <form >
+                <label>Feed Name</label>
+                <input type="text" name="title" />
+                <br/>
+                <label>URL</label>
+                <input type="text" name="url" />
+                <br />
+                <input type="submit" name="submit" />
+            </form>
         );
     }
 }
