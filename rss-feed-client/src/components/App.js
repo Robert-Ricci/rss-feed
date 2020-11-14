@@ -1,5 +1,9 @@
 import React from 'react';
-import RssContainer from './containers/RssContainer';
+import RssContainer from '../containers/RssContainer';
+
+
+
+
 const App = () => {
   return (
     <div>
