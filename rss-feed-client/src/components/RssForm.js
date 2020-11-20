@@ -13,21 +13,35 @@ class rssForm extends Component {
         }
     }
     
+    handleChange = e => {
+        const { name, value } = e.target
+        this.setState({
+            [name]:value
+        })
+    }
+
     handleSubmit = e => {
         e.preventDefault();
+        console.log("working")
         this.props.addFeed(this.state)
+        this.setState({
+            
+                title:'',
+                url:''
+            
+        })
     }
     
     render() {
         return (
             <form className="rss-form" onSubmit={event => this.handleSubmit(event)}>
                 <label>Feed Name</label>
-                <input type="text" name="title" />
+                <input type="text" value = {this.state.title} onChange={event => this.handleChange(event)} name="title" />
                 <br/>
                 <label>URL</label>
-                <input type="text" name="url" />
+                <input type="text" value = {this.state.url} onChange={event => this.handleChange(event)}  name="url" />
                 <br />
-                <input type="submit" name="submit" />
+                <input type="submit" valur = "submit" name="submit" />
             </form>
         );
     }
